@@ -11,5 +11,5 @@ def homepage(request):
     name = 'Antonio'
     age = 15
 
-    print(name)
+    print(request)
     return render(request, 'index.html', {'name':name, 'age':age,})

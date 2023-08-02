@@ -12,4 +12,4 @@ def homepage(request):
     age = 15
 
     print(request)
-    return render(request, 'index.html', {'name':name, 'age':age,})
+    return render(request, 'index.html', {'name':name, 'age':age})

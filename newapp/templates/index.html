@@ -1,5 +1,9 @@
 <html>
     <body>
-        Hello {{name}} my age is {{age}}
+        {% for val in data %}
+        <p>{{ val.name }}</p>
+        <p>{{ val.age }}</p>
+        <p>{{ val.mobile}}</p>
+        {% endfor %}
     </body>
 </html>

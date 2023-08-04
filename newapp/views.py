@@ -14,4 +14,4 @@ def homepage(request):
 
     for val in x:
         print(val)
-    return render(request, 'index.html')
+    return render(request, 'index.html',{'data': x})

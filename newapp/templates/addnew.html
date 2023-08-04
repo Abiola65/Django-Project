@@ -2,6 +2,7 @@
     <body>
         <h1> Add New Customer </h1>
         <form method='post'>
+            {% csrf_token %}
             {{ formset }}
             <input type="submit" value='OK' />
 

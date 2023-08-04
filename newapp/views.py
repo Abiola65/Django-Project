@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Customer
 
 def homepage(request):
     """
@@ -8,8 +9,9 @@ def homepage(request):
     Returns index.html template - no db data returned
     
     """
-    name = 'Antonio'
-    age = 15
 
-    print(request)
-    return render(request, 'index.html', {'name':name, 'age':age})
+    x = Customer.objects.all()
+
+    for val in x:
+        print(val)
+    return render(request, 'index.html')

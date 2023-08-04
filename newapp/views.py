@@ -1,6 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Customer
+from .forms import CustomerForm
+
+def addnew(request):
+    formset = CustomerForm()
+
+
+
+    return render(request, 'addnew.html',{'formset':formset})
 
 def homepage(request):
     """
